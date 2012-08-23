@@ -1,10 +1,14 @@
 BreweryTracker::Application.routes.draw do
 
+  get "users/new"
 
- # get "home/index"
-  get "home/about"
-  get "home/home"
-  get "home/browse"
+  root to: 'home#home'
+
+  match '/signup', to: 'users#new'
+
+  match '/browse', to: 'home#browse'
+  match '/about',  to: 'home#about'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

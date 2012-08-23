@@ -2,31 +2,29 @@ require 'spec_helper'
 
 describe "Home Controller" do
 
-  describe "Home Page" do
-  
-    it "should have the h1 'Brewery Tracker'" do
-      visit '/home/home'
-      page.should have_selector('h1', :text => 'Brewery Tracker')
-    end
+  subject {page}
 
-    it "should have the title 'Home'" do
-      visit '/home/home'
-      page.should have_selector('title',
-                        :text => "Brewery Tracker")
-     end
+  describe "Home Page" do
+    before { visit root_path }
+
+    it { should have_selector('h1', text: 'Brewery Tracker') }
+    it { should have_selector('title', text: full_title('') }
+    it { should_not have_selector 'title', text: '|Home' }
   end
 
   describe "Browse Brewery Page" do
-    
-    it "should have the h1 content 'Browse Breweries'" do
-      vist '/home/browse'
-      page.should have_selector('h1', :text => 'Browse Breweries')
-    end
+    before { visit browse_page }
 
-    it "should have the the title 'Browse Breweries'" do
-      visit '/home/browse'
-      page.should have_selector('title', :text => "Brewery Tracker | Browse")
-    end
+    it { should have_selector('h1', text: 'Browse Breweries') }
+    it { should have_selector('title', text: full_title('Browse')) }
   end
+
+  describe "About Page" do
+    before { visit about_page }
+
+    it { should have_selector('h1', text: 'About') }
+    it { should have_selector('title', text: full_title('About')) }
+  end
+
 end
 
