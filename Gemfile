@@ -13,6 +13,8 @@ group :test, :development do
   gem 'rspec-rails', '2.10.0'
 end
 
+gem 'annotate', '2.5.0', group: :development
+
 group :test do
   gem 'capybara'
   gem 'cucumber-rails'
