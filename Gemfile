@@ -9,7 +9,6 @@ gem 'bcrypt-ruby', '3.0.1'
 
 group :test, :development do 
   gem 'sqlite3', '1.3.6'
-  gem 'capybara'
   gem 'launchy'
   gem 'rspec-rails', '2.9.0'
 end
@@ -17,10 +16,11 @@ end
 gem 'annotate', '2.5.0', group: :development
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '1.1.2'
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
+  gem 'factory_girl_rails', '4.1.0'
 end
 
 # Gems used only for assets and not required

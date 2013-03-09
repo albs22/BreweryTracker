@@ -1,6 +1,6 @@
 BreweryTracker::Application.routes.draw do
 
-  get "users/new"
+  resources :users
 
   root to: 'home#home'
 
@@ -8,6 +8,7 @@ BreweryTracker::Application.routes.draw do
 
   match '/browse', to: 'home#browse'
   match '/about',  to: 'home#about'
+  match '/signup', to: 'users#new'
 
 
   # The priority is based upon order of creation:
