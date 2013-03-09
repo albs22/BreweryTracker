@@ -1,3 +1,8 @@
+$navbarBackground:                #454243 ;
+$navbarBackgroundHighlight:       #635E60 ;
+$navbarText:                      #CFCACC ;
+$navbarLinkColor:                 #CFCACC ;
+$navbarSearchPlaceholderColor:    #EEC844 ;
 @import "bootstrap";
 
 $grayMediumLight: #eaeaea;
@@ -74,11 +79,24 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
+   &:hover {
+    color: white;
+    text-decoration: none;
+  }
 }
-
+/*
 #logo:hover {
   color: #fff;
   text-decoration: none;
+}
+*/
+
+.navbar-inner {
+  background-color: #000;
+}
+
+.navbar {
+  background-clor: black !important;
 }
 
 /* footer */
