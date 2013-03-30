@@ -17,8 +17,8 @@ gem 'annotate', '2.5.0', group: :development
 
 group :test do
   gem 'capybara', '1.1.2'
-  gem 'cucumber-rails'
-  gem 'cucumber-rails-training-wheels'
+  #gem 'cucumber-rails'
+  #gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
   gem 'factory_girl_rails', '4.1.0'
 end
